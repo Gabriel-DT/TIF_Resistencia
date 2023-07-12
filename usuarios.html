@@ -22,11 +22,11 @@
 
 <body>
     <header id="header">
-        
+
     </header>
     <main>
         <div id="app" class="container">
-            <h1>Usuarios</h1>
+            <h1>Listado de usuarios</h1>
             <br>
             <a class="btn btn-primary animate__animated animate__heartBeat btn-animate" href="crear-usuario.html">Nuevo</a>
             <br><br>
@@ -44,6 +44,7 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Id</th>
+                                    <th scope="col">Foto</th>
                                     <th scope="col">Usuario</th>
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Apellido</th>
@@ -55,6 +56,7 @@
                             <tbody>
                                 <tr class="" v-for="usuario in usuarios">
                                     <td scope="row">{{usuario.id}}</td>
+                                    <td > <img :src="`https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/${usuario.id}.jpg`" /> </td>
                                     <td>{{usuario.usuario}}</td>
                                     <td>{{usuario.nombre}}</td>
                                     <td>{{usuario.apellido}}</td>
