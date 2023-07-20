@@ -1,10 +1,13 @@
+console.log(location.search); 
+var usuario = location.search.substr(9); 
+console.log(usuario);
 const { createApp } = Vue;
 
 createApp({
   data() {
     return {
       usuarios: [], 
-      url: "https://gditore.pythonanywhere.com/usuarios", 
+      url: "https://gditore.pythonanywhere.com/usuarios//buscar/" + usuario, 
       error: false,
       cargando: true,
       id: 0,
