@@ -39,6 +39,8 @@
             <br><br>
             <div v-if="error">
                 <p>Lo sentimos, ha ocurrido un error.</p>
+                <p>Pruebe recargar la página.</p>
+                <button type="button" class="btn btn-primary me-2" onclick="window.location.reload();">Recargar</button>
             </div>
             <div v-else>
                 <section v-if="cargando">
